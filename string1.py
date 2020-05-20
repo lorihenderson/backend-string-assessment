@@ -28,8 +28,10 @@ __author__ = "???"
 
 
 def donuts(count):
-    # your code here
-    return
+    if count < 10:
+        return "Number of donuts: " + str(count)
+    else:
+        return "Number of donuts: many"
 
 
 # B. both_ends
@@ -42,8 +44,10 @@ def donuts(count):
 
 
 def both_ends(s):
-    # your code here
-    return
+    if len(s) < 2:
+        return ""
+
+    return s[:2] + s[-2:]
 
 
 # C. fix_start
@@ -58,8 +62,8 @@ def both_ends(s):
 
 
 def fix_start(s):
-    # your code here
-    return
+    first_char = s[0]
+    return first_char + s[1:].replace(first_char, "*")
 
 
 # D. mix_up
@@ -74,7 +78,10 @@ def fix_start(s):
 
 def mix_up(a, b):
     # your code here
-    return
+    new_a = a[:2] + b[2:]
+    new_b = b[:2] + a[2:]
+
+    return new_b + " " + new_a
 
 
 # Provided simple test() function used in main() to print
