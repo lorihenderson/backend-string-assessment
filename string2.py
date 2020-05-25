@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Lor Henderson"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -71,17 +71,20 @@ def verbing(s):
 
 
 def front_back(a, b):
-    # your code here
-    new_a = a[0:len(a)//2]
-    new_b = b[0:len(b)//2]
-    # second_half_a = 
-    # second_half_b = 
-    new_a += new_b
-    if len(new_a and new_b) % 2 == 0:
-        return new_a
-    else:
-        return new_a
+    a_front = a[0:len(a)//2]
+    b_front = b[0:len(b)//2]
 
+    a_back = a[-(len(a) // 2):]
+    # test = len(a) // 2
+    b_back = b[-(len(b) // 2):]
+
+    if len(a) % 2 == 1:
+        a_front = a[0:len(a)//2 + 1]
+
+    if len(b) % 2 == 1:
+        b_front = b[0:len(b)//2 + 1]
+
+    return a_front + b_front + a_back + b_back
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
